@@ -1,0 +1,278 @@
+/* AI创意大脑 - 主样式表 */
+
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --accent-color: #e74c3c;
+  --dark-color: #2c3e50;
+  --light-color: #ecf0f1;
+  --text-color: #333333;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--light-color);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 20px 0;
+  box-shadow: var(--box-shadow);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.logo p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: var(--transition);
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+.hero {
+  background: linear-gradient(to right, var(--dark-color), var(--primary-color));
+  color: white;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #27ae60;
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.features {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--dark-color);
+}
+
+footer {
+  background-color: var(--dark-color);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* 表单样式 */
+.form-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin: 20px 0;
+}
+
+.form-group {
+  margin-bottom: a20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  font-size: 16px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.creative-container {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 30px;
+  margin: 20px 0;
+  box-shadow: var(--box-shadow);
+}
+
+.creative-item {
+  border-left: 4px solid var(--primary-color);
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: #f9f9f9;
+}
+
+.creative-item h3 {
+  color: var(--dark-color);
+  margin-bottom: 15px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+  }
+  
+  nav ul {
+    margin-top: 20px;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  .hero h2 {
+    font-size: 28px;
+  }
+  
+  .hero p {
+    font-size: 16px;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
